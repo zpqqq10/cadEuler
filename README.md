@@ -13,6 +13,15 @@ cmake .. && make
 
 # Structure
 
+运行环境：
+
+```bash
+$ uname -a
+Linux 4090msi 6.2.0-26-generic #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Jul 13 16:27:29 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+代码结构：
+
 ```bash
 .
 ├── 3rdparty        # 第三方库，未使用
