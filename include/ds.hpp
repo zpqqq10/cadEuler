@@ -114,7 +114,7 @@ public:
     HalfEdge *temp = HalfEdgeList->nextHE;
     for (; temp->startV != v0 || temp->endV != v1; temp = temp->nextHE) {
       if (temp == HalfEdgeList) {
-        return nullptr;
+        return nullptr; 
       }
     }
     return temp;

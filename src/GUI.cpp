@@ -44,8 +44,17 @@ void reshape(int w, int h) {
 }
 
 void processNormalKeys(unsigned char key, int xx, int yy) {
-  if (key == 27)
+  switch (key) {
+  case 'w':
+    GUI::deltaMove += 0.5;
+    break;
+  case 's':
+    GUI::deltaMove += -0.5;
+    break;
+  case 27:
     exit(0);
+    break;
+  }
 }
 
 void pressKey(int key, int xx, int yy) {
@@ -61,6 +70,8 @@ void pressKey(int key, int xx, int yy) {
 
 void releaseKey(int key, int x, int y) {
   switch (key) {
+  case 'w':
+  case 's':
   case GLUT_KEY_UP:
   case GLUT_KEY_DOWN:
     GUI::deltaMove += 0;
